@@ -1,13 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search");
   const problems = document.querySelectorAll(".problem");
 
-  searchInput.addEventListener("input", () => {
+  searchInput.addEventListener("input", function () {
     const query = searchInput.value.toLowerCase();
 
-    problems.forEach(problem => {
+    problems.forEach(function (problem) {
       const text = problem.innerText.toLowerCase();
-      problem.style.display = text.includes(query) ? "block" : "none";
+
+      if (text.includes(query)) {
+        problem.style.display = "block";
+      } else {
+        problem.style.display = "none";
+      }
     });
   });
 });
