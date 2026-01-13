@@ -50,8 +50,8 @@ coding-website/
 ├── styles.css
 ├── script.js
 └── README.md
-'''
 
+```text
 ## 🙌 Author
 
 **Aanand**  
