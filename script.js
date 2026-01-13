@@ -1,31 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".toggle-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const problem = btn.closest(".problem");
-      const solution = problem.querySelector(".solution");
+const search = document.getElementById("search");
+const problems = document.querySelectorAll(".problem");
 
-      if (!solution) {
-        alert("Solution div missing!");
-        return;
-      }
+search.addEventListener("keyup", () => {
+  const val = search.value.toLowerCase();
 
-      const isOpen = solution.style.display === "block";
-
-      // close all solutions
-      document.querySelectorAll(".solution").forEach(s => {
-        s.style.display = "none";
-      });
-
-      document.querySelectorAll(".toggle-btn").forEach(b => {
-        b.innerText = "Show Solution";
-      });
-
-      // open current
-      if (!isOpen) {
-        solution.style.display = "block";
-        btn.innerText = "Hide Solution";
-      }
-    });
+  problems.forEach(p => {
+    const key = (p.dataset.keywords || p.innerText).toLowerCase();
+    p.style.display = key.includes(val) ? "block" : "none";
   });
 });
+
+function toggleSolution(btn) {
+  const sol = btn.nextElementSibling;
+  sol.style.display = sol.style.display === "block" ? "none" : "block";
+}
 
