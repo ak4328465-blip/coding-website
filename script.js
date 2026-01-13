@@ -1,23 +1,32 @@
-const search = document.getElementById("search");
-const problems = document.querySelectorAll(".problem");
+document.addEventListener("DOMContentLoaded", function () {
 
-search.addEventListener("keyup", () => {
-  const val = search.value.toLowerCase();
+  const search = document.getElementById("search");
+  const problems = document.querySelectorAll(".problem");
 
-  problems.forEach(p => {
-    const key = (p.dataset.keywords || p.innerText).toLowerCase();
-    p.style.display = key.includes(val) ? "block" : "none";
+  search.addEventListener("keyup", () => {
+    const val = search.value.toLowerCase();
+    problems.forEach(p => {
+      const key = (p.dataset.keywords || p.innerText).toLowerCase();
+      p.style.display = key.includes(val) ? "block" : "none";
+    });
   });
+
 });
 
 function toggleSolution(btn) {
   const problem = btn.closest(".problem");
   const sol = problem.querySelector(".solution");
 
-  if (!sol) return;
+  if (!sol) {
+    alert("Solution div not found");
+    return;
+  }
 
-  const isOpen = sol.style.display === "block";
-
-  sol.style.display = isOpen ? "none" : "block";
-  btn.innerText = isOpen ? "Show Solution" : "Hide Solution";
+  if (sol.style.display === "block") {
+    sol.style.display = "none";
+    btn.innerText = "Show Solution";
+  } else {
+    sol.style.display = "block";
+    btn.innerText = "Hide Solution";
+  }
 }
