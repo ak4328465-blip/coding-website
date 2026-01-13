@@ -40,3 +40,26 @@ button{
 pre{
  white-space:pre-wrap;
 }
+/* ===== Hover / Glow Effect for Problem Cards ===== */
+
+.problem {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #4CAF50;
+}
+
+/* ===== Button Hover ===== */
+
+button {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #4CAF50;
+  color: white;
+  transform: scale(1.05);
+}
