@@ -50,3 +50,30 @@ coding-website/
 ├── styles.css
 ├── script.js
 └── README.md
+---
+
+## 🙌 Author
+
+**Aanand**  
+B.Tech Student | Aspiring Data Scientist  
+
+🎯 Interested in:
+- Data Structures & Algorithms
+- Problem Solving
+- Web Development
+- Data Science (beginner level)
+
+🛠️ **Skills**
+- C
+- Java
+- Python
+- Data Structures & Algorithms (DSA)
+- HTML, CSS, JavaScript
+
+📫 **Contact**
+- Email: ak4328465@gmail.com  
+- GitHub: https://github.com/ak4328465-blip  
+
+🌱 Currently working on:
+- Improving DSA problem-solving skills
+- Building real-world projects for internships
