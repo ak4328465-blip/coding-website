@@ -1,16 +1,17 @@
-const searchInput = document.getElementById("search");
+const search = document.getElementById("search");
 const problems = document.querySelectorAll(".problem");
 
-searchInput.addEventListener("keyup", function () {
-  const value = searchInput.value.toLowerCase();
-
-  problems.forEach(problem => {
-    const text = problem.innerText.toLowerCase();
-    if (text.includes(value)) {
-      problem.style.display = "block";
-    } else {
-      problem.style.display = "none";
-    }
-  });
+search.addEventListener("keyup", () => {
+ const val = search.value.toLowerCase();
+ problems.forEach(p => {
+  const key = p.dataset.keywords;
+  p.style.display = key.includes(val) ? "block" : "none";
+ });
 });
 
+document.querySelectorAll(".toggle").forEach(btn=>{
+ btn.onclick=()=>{
+  const sol = btn.nextElementSibling;
+  sol.style.display = sol.style.display==="block"?"none":"block";
+ };
+});
