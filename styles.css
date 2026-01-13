@@ -36,7 +36,15 @@ button{
  padding:10px;
  border-radius:8px;
 }
+/* ===== Problem Definition Text ===== */
+.definition {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0 12px;
+  line-height: 1.5;
+}
 
 pre{
  white-space:pre-wrap;
 }
+
