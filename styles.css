@@ -145,3 +145,46 @@ pre{
     0 0 0 3px rgba(76,175,80,0.15),
     0 10px 25px rgba(0,0,0,0.15);
 }
+/* ===== DARK MODE TOGGLE BUTTON ===== */
+#darkToggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+/* ===== DARK MODE STYLES ===== */
+body.dark {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark .problem {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+body.dark button {
+  background: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+body.dark pre {
+  background: #0f0f0f;
+  color: #00ffcc;
+}
+
+body.dark #search {
+  background: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #444;
+}
