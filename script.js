@@ -1,13 +1,13 @@
-document.getElementById("search").addEventListener("input", function () {
-  const query = this.value.toLowerCase();
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("search");
   const problems = document.querySelectorAll(".problem");
 
-  problems.forEach(problem => {
-    const title = problem.textContent.toLowerCase();
-    if (title.includes(query)) {
-      problem.style.display = "block";
-    } else {
-      problem.style.display = "none";
-    }
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+
+    problems.forEach(problem => {
+      const text = problem.innerText.toLowerCase();
+      problem.style.display = text.includes(query) ? "block" : "none";
+    });
   });
 });
