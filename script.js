@@ -1,17 +1,24 @@
 const search = document.getElementById("search");
 const problems = document.querySelectorAll(".problem");
 
-search.addEventListener("keyup", () => {
- const val = search.value.toLowerCase();
- problems.forEach(p => {
-  const key = p.dataset.keywords;
-  p.style.display = key.includes(val) ? "block" : "none";
- });
+search.addEventListener("input", () => {
+  const val = search.value.toLowerCase().trim();
+
+  problems.forEach(p => {
+    const key = p.dataset.keywords.toLowerCase();
+
+    if (val === "") {
+      p.style.display = "block";   // 👈 IMPORTANT FIX
+    } else if (key.includes(val)) {
+      p.style.display = "block";
+    } else {
+      p.style.display = "none";
+    }
+  });
 });
 
-document.querySelectorAll(".toggle").forEach(btn=>{
- btn.onclick=()=>{
+// Toggle solution (matches your HTML)
+function toggleSolution(btn) {
   const sol = btn.nextElementSibling;
-  sol.style.display = sol.style.display==="block"?"none":"block";
- };
-});
+  sol.style.display = sol.style.display === "block" ? "none" : "block";
+}
