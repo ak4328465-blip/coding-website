@@ -108,5 +108,40 @@ pre{
   pre {
     font-size: 13px;
   }
+/* 🔥 Strong Mobile Search Bar Look */
+@media (max-width: 600px) {
 
+  #search {
+    width: 100%;
+    max-width: 96%;
+    padding: 14px 16px;
+    font-size: 15px;
+
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+
+    background: #ffffff;
+
+    /* 👇 THIS makes the difference */
+    box-shadow: 
+      0 10px 25px rgba(0,0,0,0.12),
+      0 2px 6px rgba(0,0,0,0.06);
+
+    margin: 16px auto 20px auto;
+    display: block;
+  }
+
+  #search::placeholder {
+    color: #aaa;
+    font-size: 14px;
+  }
+
+}
+
+#search:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow:
+    0 0 0 3px rgba(76,175,80,0.15),
+    0 10px 25px rgba(0,0,0,0.15);
 }
