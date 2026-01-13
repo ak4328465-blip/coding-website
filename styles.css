@@ -1,123 +1,42 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+body{
+ font-family: Arial;
+ background:#f5f7fa;
+ padding:15px;
+ max-width:900px;
+ margin:auto;
 }
 
-h1 {
-  text-align: center;
-  color: #333;
+h1{text-align:center}
+
+input{
+ width:100%;
+ padding:12px;
+ margin:15px 0;
+ font-size:16px;
 }
 
-#search {
-  display: block;
-  margin: 20px auto;
-  padding: 10px;
-  width: 80%;
-  max-width: 400px;
-  font-size: 16px;
+.problem{
+ background:#fff;
+ padding:15px;
+ margin:12px 0;
+ border-radius:10px;
+ box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
 
-.problem {
-  background: white;
-  margin: 10px auto;
-  padding: 15px;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f7fa;
-  padding: 20px;
+button{
+ margin-top:10px;
+ padding:8px 12px;
+ cursor:pointer;
 }
 
-h1 {
-  text-align: center;
-  color: #222;
+.solution{
+ display:none;
+ margin-top:10px;
+ background:#f0f0f0;
+ padding:10px;
+ border-radius:8px;
 }
 
-h2 {
-  margin-top: 30px;
-  color: #333;
+pre{
+ white-space:pre-wrap;
 }
-
-#search {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  margin: 20px auto;
-  display: block;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 6px;
-}
-
-.problem {
-  background: white;
-  padding: 15px;
-  margin: 10px auto;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.problem:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.problem h4 {
-  margin: 0;
-  color: #111;
-}
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f4f6f8;
-}
-
-h1 {
-  text-align: center;
-}
-
-h2 {
-  margin-top: 30px;
-  color: #333;
-}
-
-#search {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  margin: 20px 0;
-}
-
-.problem {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-#search {
-  width: 100%;
-  max-width: 500px;
-  display: block;
-  margin: 20px auto;
-  padding: 12px 15px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  outline: none;
-}
-
-#search:focus {
-  border-color: #4a90e2;
-}
-
-
