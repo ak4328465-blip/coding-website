@@ -29,12 +29,13 @@ button{
  cursor:pointer;
 }
 
-.solution{
- display:none;
- margin-top:10px;
- background:#f0f0f0;
- padding:10px;
- border-radius:8px;
+.solution {
+  display: none;
+  overflow: visible;   /* 👈 यही line add करनी थी */
+  margin-top: 10px;
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
 }
 /* ===== Problem Definition Text ===== */
 .definition {
@@ -101,5 +102,6 @@ button:hover {
   box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
   outline: none;
 }
+
 
 
