@@ -3,9 +3,8 @@ const problems = document.querySelectorAll(".problem");
 
 search.addEventListener("keyup", () => {
   const val = search.value.toLowerCase();
-
   problems.forEach(p => {
-    const key = p.dataset.keywords.toLowerCase();
+    const key = p.dataset.keywords || "";
     p.style.display = key.includes(val) ? "block" : "none";
   });
 });
