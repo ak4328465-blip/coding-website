@@ -1,18 +1,11 @@
-// Search functionality
-const search = document.getElementById("search");
-const problems = document.querySelectorAll(".problem");
-
-search.addEventListener("keyup", () => {
-  const val = search.value.toLowerCase();
-  problems.forEach(p => {
-    const key = p.dataset.keywords;
-    p.style.display = key.includes(val) ? "block" : "none";
-  });
-});
-
-// ✅ SHOW / HIDE SOLUTION FUNCTION
 function toggleSolution(btn) {
-  const solution = btn.nextElementSibling;
+  const problemCard = btn.closest(".problem");
+  const solution = problemCard.querySelector(".solution");
+
+  if (!solution) {
+    alert("Solution not found!");
+    return;
+  }
 
   if (solution.style.display === "block") {
     solution.style.display = "none";
