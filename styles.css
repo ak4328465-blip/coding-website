@@ -18,7 +18,11 @@ input{
   border-radius: 8px;
   border: 1px solid #ccc;
 }
-
+input:focus{
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px rgba(76,175,80,0.4);
+}
 .problem{
  background:#fff;
  padding:15px;
@@ -58,8 +62,4 @@ button:hover{
 pre{
  white-space:pre-wrap;
 }
-input:focus{
-  outline: none;
-  border-color: #4CAF50;
-  box-shadow: 0 0 6px rgba(76,175,80,0.4);
-}
+
