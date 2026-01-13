@@ -51,8 +51,8 @@ coding-website/
 ├── script.js
 └── README.md
 '''
-
-## 🙌 Author
+'''md
+## 👨‍💻 Author
 
 **Aanand**  
 B.Tech Student | Aspiring Data Scientist  
