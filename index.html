@@ -77,9 +77,14 @@ print(arr[::-1])
   <div class="solution">
 <pre>
 def merge_sort(arr):
- if len(arr)<=1: return arr
- mid=len(arr)//2
- return merge(merge_sort(arr[:mid]),merge_sort(arr[mid:]))
+    if len(arr) <= 1:
+        return arr
+
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+
+    return merge(left, right)
 </pre>
   </div>
 </div>
@@ -191,3 +196,4 @@ open("a.txt","w")
 <script src="script.js"></script>
 </body>
 </html>
+
