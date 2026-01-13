@@ -66,4 +66,39 @@ pre{
     max-width: 460px;   /* thoda sa hi bada */
   }
 }
+/* ===== Card Hover Effect ===== */
+.problem {
+  transition: all 0.3s ease;
+}
+
+.problem:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-left: 5px solid #4CAF50;
+}
+
+/* ===== Button Hover Effect ===== */
+button {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+  transform: scale(1.05);
+}
+
+/* ===== Search Box Focus Effect ===== */
+#search {
+  transition: all 0.3s ease;
+}
+
+#search:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+  outline: none;
+}
 
