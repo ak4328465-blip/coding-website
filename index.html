@@ -50,6 +50,57 @@
 
 <div class="problem"><h4>Two Sum</h4></div>
 <div class="problem"><h4>Binary Search</h4></div>
+  <div class="problem" data-keywords="binary search dsa array">
+  <h4>Binary Search</h4>
+  <button class="toggle-btn">Show Solution</button>
+
+  <div class="solution hidden">
+    <p><b>Problem:</b> Find an element in a sorted array using Binary Search.</p>
+
+    <h5>C Solution</h5>
+    <pre>
+int binarySearch(int arr[], int n, int x) {
+  int l = 0, r = n - 1;
+  while (l <= r) {
+    int mid = (l + r) / 2;
+    if (arr[mid] == x) return mid;
+    else if (arr[mid] < x) l = mid + 1;
+    else r = mid - 1;
+  }
+  return -1;
+}
+    </pre>
+
+    <h5>Java Solution</h5>
+    <pre>
+static int binarySearch(int[] arr, int x) {
+  int l = 0, r = arr.length - 1;
+  while (l <= r) {
+    int mid = (l + r) / 2;
+    if (arr[mid] == x) return mid;
+    else if (arr[mid] < x) l = mid + 1;
+    else r = mid - 1;
+  }
+  return -1;
+}
+    </pre>
+
+    <h5>Python Solution</h5>
+    <pre>
+def binary_search(arr, x):
+    l, r = 0, len(arr)-1
+    while l <= r:
+        mid = (l + r) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            l = mid + 1
+        else:
+            r = mid - 1
+    return -1
+    </pre>
+  </div>
+</div>
 <div class="problem"><h4>Reverse an Array</h4></div>
 <div class="problem"><h4>Merge Sort</h4></div>
 <div class="problem"><h4>Quick Sort</h4></div>
@@ -103,6 +154,7 @@
   <script src="script.js"defer></script>
 </body>
 </html>
+
 
 
 
