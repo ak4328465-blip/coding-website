@@ -9,10 +9,14 @@ body{
 h1{text-align:center}
 
 input{
- width:100%;
- padding:12px;
- margin:15px 0;
- font-size:16px;
+  width: 100%;
+  max-width: 600px;   /* laptop pe zyada wide nahi */
+  padding: 10px 14px; /* height thodi kam */
+  margin: 15px auto;  /* center align */
+  font-size: 15px;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 .problem{
@@ -53,4 +57,9 @@ button:hover{
 
 pre{
  white-space:pre-wrap;
+}
+input:focus{
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px rgba(76,175,80,0.4);
 }
