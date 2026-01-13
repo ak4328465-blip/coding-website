@@ -47,4 +47,23 @@ button{
 pre{
  white-space:pre-wrap;
 }
+/* ===== Search Bar – Balanced & Professional ===== */
+#search {
+  width: 100%;
+  max-width: 420px;     /* 👈 key fix: controlled width */
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 16px auto 28px;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Laptop / large screen fine-tuning */
+@media (min-width: 1024px) {
+  #search {
+    max-width: 460px;   /* thoda sa hi bada */
+  }
+}
 
