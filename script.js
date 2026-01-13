@@ -1,17 +1,31 @@
-function toggleSolution(btn) {
-  const problemCard = btn.closest(".problem");
-  const solution = problemCard.querySelector(".solution");
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".toggle-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const problem = btn.closest(".problem");
+      const solution = problem.querySelector(".solution");
 
-  if (!solution) {
-    alert("Solution not found!");
-    return;
-  }
+      if (!solution) {
+        alert("Solution div missing!");
+        return;
+      }
 
-  if (solution.style.display === "block") {
-    solution.style.display = "none";
-    btn.innerText = "Show Solution";
-  } else {
-    solution.style.display = "block";
-    btn.innerText = "Hide Solution";
-  }
-}
+      const isOpen = solution.style.display === "block";
+
+      // close all solutions
+      document.querySelectorAll(".solution").forEach(s => {
+        s.style.display = "none";
+      });
+
+      document.querySelectorAll(".toggle-btn").forEach(b => {
+        b.innerText = "Show Solution";
+      });
+
+      // open current
+      if (!isOpen) {
+        solution.style.display = "block";
+        btn.innerText = "Hide Solution";
+      }
+    });
+  });
+});
+
