@@ -1,160 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coding Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>My Coding Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1>My Coding Website</h1>
+<h1>My Coding Website</h1>
 
-  <input type="text" id="search" placeholder="Search problems">
+<input type="text" id="search" placeholder="Search problems...">
 
-  <div class="problem">
-    <h4>Two Sum</h4>
-  </div>
+<!-- ================= DSA ================= -->
+<h2>DSA</h2>
 
-  <div class="problem">
-    <h4>Longest Substring Without Repeating Characters</h4>
-  </div>
-  <h2>DSA</h2>
+<div class="problem" data-keywords="binary search dsa">
+  <h3>Binary Search</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+    <p><b>Problem:</b> Find element in sorted array.</p>
 
-<div class="problem"><h4>Binary Search</h4></div>
-<div class="problem"><h4>Merge Sort</h4></div>
-<div class="problem"><h4>Linked List</h4></div>
-
-
-<h2>C Programming</h2>
-
-<div class="problem"><h4>Arrays in C</h4></div>
-<div class="problem"><h4>Pointers in C</h4></div>
-<div class="problem"><h4>Structures in C</h4></div>
-
-
-<h2>Java Programming</h2>
-
-<div class="problem"><h4>OOPs in Java</h4></div>
-<div class="problem"><h4>Exception Handling</h4></div>
-<div class="problem"><h4>Collections Framework</h4></div>
-
-
-<h2>Python Programming</h2>
-
-<div class="problem"><h4>Python Lists</h4></div>
-<div class="problem"><h4>Dictionaries in Python</h4></div>
-<div class="problem"><h4>File Handling</h4></div>
-  <!-- ================= DSA ================= -->
-<h2>DSA Problems</h2>
-
-<div class="problem"><h4>Two Sum</h4></div>
-<div class="problem"><h4>Binary Search</h4></div>
-  <div class="problem" data-keywords="binary search dsa array">
-  <h4>Binary Search</h4>
-  <button class="toggle-btn">Show Solution</button>
-
-  <div class="solution hidden">
-    <p><b>Problem:</b> Find an element in a sorted array using Binary Search.</p>
-
-    <h5>C Solution</h5>
-    <pre>
-int binarySearch(int arr[], int n, int x) {
-  int l = 0, r = n - 1;
-  while (l <= r) {
-    int mid = (l + r) / 2;
-    if (arr[mid] == x) return mid;
-    else if (arr[mid] < x) l = mid + 1;
-    else r = mid - 1;
-  }
-  return -1;
+<pre><b>C</b>
+int binarySearch(int arr[], int n, int x){
+ int l=0,r=n-1;
+ while(l<=r){
+  int m=(l+r)/2;
+  if(arr[m]==x) return m;
+  else if(arr[m]<x) l=m+1;
+  else r=m-1;
+ }
+ return -1;
 }
-    </pre>
+</pre>
 
-    <h5>Java Solution</h5>
-    <pre>
-static int binarySearch(int[] arr, int x) {
-  int l = 0, r = arr.length - 1;
-  while (l <= r) {
-    int mid = (l + r) / 2;
-    if (arr[mid] == x) return mid;
-    else if (arr[mid] < x) l = mid + 1;
-    else r = mid - 1;
-  }
-  return -1;
+<pre><b>Java</b>
+static int binarySearch(int[] arr,int x){
+ int l=0,r=arr.length-1;
+ while(l<=r){
+  int m=(l+r)/2;
+  if(arr[m]==x) return m;
+  else if(arr[m]<x) l=m+1;
+  else r=m-1;
+ }
+ return -1;
 }
-    </pre>
+</pre>
 
-    <h5>Python Solution</h5>
-    <pre>
-def binary_search(arr, x):
-    l, r = 0, len(arr)-1
-    while l <= r:
-        mid = (l + r) // 2
-        if arr[mid] == x:
-            return mid
-        elif arr[mid] < x:
-            l = mid + 1
-        else:
-            r = mid - 1
-    return -1
-    </pre>
+<pre><b>Python</b>
+def binary_search(arr,x):
+ l,r=0,len(arr)-1
+ while l<=r:
+  m=(l+r)//2
+  if arr[m]==x: return m
+  elif arr[m]<x: l=m+1
+  else: r=m-1
+ return -1
+</pre>
   </div>
 </div>
-<div class="problem"><h4>Reverse an Array</h4></div>
-<div class="problem"><h4>Merge Sort</h4></div>
-<div class="problem"><h4>Quick Sort</h4></div>
-<div class="problem"><h4>Linked List Traversal</h4></div>
-<div class="problem"><h4>Detect Cycle in Linked List</h4></div>
-<div class="problem"><h4>Stack Using Array</h4></div>
-<div class="problem"><h4>Queue Using Linked List</h4></div>
-<div class="problem"><h4>Binary Tree Inorder Traversal</h4></div>
-<div class="problem"><h4>BFS of Graph</h4></div>
-<div class="problem"><h4>DFS of Graph</h4></div>
+
+<div class="problem" data-keywords="reverse array dsa">
+  <h3>Reverse an Array</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+arr = [1,2,3]
+print(arr[::-1])
+</pre>
+  </div>
+</div>
+
+<div class="problem" data-keywords="merge sort dsa">
+  <h3>Merge Sort</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+def merge_sort(arr):
+ if len(arr)<=1: return arr
+ mid=len(arr)//2
+ return merge(merge_sort(arr[:mid]),merge_sort(arr[mid:]))
+</pre>
+  </div>
+</div>
 
 <!-- ================= C ================= -->
 <h2>C Programming</h2>
 
-<div class="problem"><h4>Basic Input Output in C</h4></div>
-<div class="problem"><h4>Arrays in C</h4></div>
-<div class="problem"><h4>Strings in C</h4></div>
-<div class="problem"><h4>Pointers in C</h4></div>
-<div class="problem"><h4>Structures in C</h4></div>
-<div class="problem"><h4>Functions in C</h4></div>
-<div class="problem"><h4>Recursion in C</h4></div>
-<div class="problem"><h4>File Handling in C</h4></div>
-<div class="problem"><h4>Dynamic Memory Allocation</h4></div>
+<div class="problem" data-keywords="arrays c">
+  <h3>Arrays in C</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+int arr[5]={1,2,3,4,5};
+</pre>
+  </div>
+</div>
+
+<div class="problem" data-keywords="pointers c">
+  <h3>Pointers in C</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+int x=10;
+int *p=&x;
+</pre>
+  </div>
+</div>
+
+<div class="problem" data-keywords="structures c">
+  <h3>Structures in C</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+struct Student{
+ int id;
+};
+</pre>
+  </div>
+</div>
 
 <!-- ================= JAVA ================= -->
 <h2>Java Programming</h2>
 
-<div class="problem"><h4>Java Basics</h4></div>
-<div class="problem"><h4>OOP Concepts in Java</h4></div>
-<div class="problem"><h4>Inheritance in Java</h4></div>
-<div class="problem"><h4>Polymorphism in Java</h4></div>
-<div class="problem"><h4>Exception Handling</h4></div>
-<div class="problem"><h4>Multithreading</h4></div>
-<div class="problem"><h4>Collections Framework</h4></div>
-<div class="problem"><h4>ArrayList vs LinkedList</h4></div>
-<div class="problem"><h4>File Handling in Java</h4></div>
+<div class="problem" data-keywords="oops java">
+  <h3>OOPs in Java</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+class A{
+ void show(){}
+}
+</pre>
+  </div>
+</div>
+
+<div class="problem" data-keywords="exception java">
+  <h3>Exception Handling</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+try{}catch(Exception e){}
+</pre>
+  </div>
+</div>
+
+<div class="problem" data-keywords="collections java">
+  <h3>Collections Framework</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+ArrayList<Integer> list=new ArrayList<>();
+</pre>
+  </div>
+</div>
 
 <!-- ================= PYTHON ================= -->
 <h2>Python Programming</h2>
 
-<div class="problem"><h4>Python Basics</h4></div>
-<div class="problem"><h4>Variables and Data Types</h4></div>
-<div class="problem"><h4>Lists in Python</h4></div>
-<div class="problem"><h4>Tuples and Sets</h4></div>
-<div class="problem"><h4>Dictionaries in Python</h4></div>
-<div class="problem"><h4>Functions in Python</h4></div>
-<div class="problem"><h4>Recursion in Python</h4></div>
-<div class="problem"><h4>File Handling in Python</h4></div>
-<div class="problem"><h4>OOP in Python</h4></div>
+<div class="problem" data-keywords="lists python">
+  <h3>Python Lists</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+a=[1,2,3]
+</pre>
+  </div>
+</div>
 
-  <script src="script.js"defer></script>
+<div class="problem" data-keywords="dictionary python">
+  <h3>Dictionaries in Python</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+d={"a":1}
+</pre>
+  </div>
+</div>
+
+<div class="problem" data-keywords="file handling python">
+  <h3>File Handling</h3>
+  <button class="toggle">Show Solution</button>
+  <div class="solution">
+<pre>
+open("a.txt","w")
+</pre>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
