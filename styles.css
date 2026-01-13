@@ -62,7 +62,7 @@ button:hover{
 pre{
  white-space:pre-wrap;
 }
-/* ===== Mobile Improvements ===== */
+/* ===== FINAL MOBILE FIX (SINGLE MEDIA QUERY) ===== */
 @media (max-width: 600px) {
 
   h1 {
@@ -87,37 +87,26 @@ pre{
     font-size: 15px;
   }
 
-  input {
-    font-size: 14px;
-    padding: 10px 12px;
-    max-width: 100%;
+  #search {
+    width: 100%;
+    max-width: 94%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    margin: 14px auto 18px auto;
+    display: block;
+  }
+
+  #search::placeholder {
+    font-size: 13px;
+    color: #999;
   }
 
   pre {
     font-size: 13px;
   }
- /* ===== Mobile Search Bar Fine Tuning ===== */
-@media (max-width: 600px) {
 
-  #search{
-    max-width: 92%;
-    padding: 10px 14px 10px 36px; /* left space icon ke liye */
-    font-size: 14px;
-    border-radius: 12px;
-    margin: 12px auto 16px auto;
-    background-color: #ffffff;
-  }
-
-  #search::placeholder{
-    font-size: 13px;
-    color: #999;
-  }
 }
- @media (max-width: 600px) {
-  #search {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  }
-}
-}
-
-
