@@ -41,17 +41,7 @@ A clean and responsive coding practice website where users can learn and revise 
 
 ---
 
-## 📂 Project Structure
 
-```text
-coding-website/
-│
-├── index.html
-├── styles.css
-├── script.js
-└── README.md
-'''
-'''md
 ## 👨‍💻 Author
 
 **Aanand**  
