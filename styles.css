@@ -96,5 +96,28 @@ pre{
   pre {
     font-size: 13px;
   }
+ /* ===== Mobile Search Bar Fine Tuning ===== */
+@media (max-width: 600px) {
+
+  #search{
+    max-width: 92%;
+    padding: 10px 14px 10px 36px; /* left space icon ke liye */
+    font-size: 14px;
+    border-radius: 12px;
+    margin: 12px auto 16px auto;
+    background-color: #ffffff;
+  }
+
+  #search::placeholder{
+    font-size: 13px;
+    color: #999;
+  }
 }
+ @media (max-width: 600px) {
+  #search {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+}
+}
+
 
