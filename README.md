@@ -51,7 +51,7 @@ coding-website/
 ├── script.js
 └── README.md
 
-```text
+```**
 ## 🙌 Author
 
 **Aanand**  
