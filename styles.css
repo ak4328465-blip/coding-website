@@ -62,4 +62,39 @@ button:hover{
 pre{
  white-space:pre-wrap;
 }
+/* ===== Mobile Improvements ===== */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 18px;
+  }
+
+  .problem {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px 12px;
+    max-width: 100%;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+}
 
