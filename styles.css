@@ -188,3 +188,6 @@ body.dark #search {
   color: #ffffff;
   border: 1px solid #444;
 }
+html {
+  scroll-behavior: smooth;
+}
