@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ak4328465-blip.github.io/coding-website/sitemap.xml
