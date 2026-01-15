@@ -1,4 +1,3 @@
-<meta name="robots" content="noindex, nofollow">
 # 💻 My Coding Website
 
 A clean and responsive coding practice website where users can learn and revise **DSA, C, Java, and Python** problems along with **solutions**.
