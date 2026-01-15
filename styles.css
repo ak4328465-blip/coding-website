@@ -1,139 +1,31 @@
-body{
- font-family: Arial;
- background:#f5f7fa;
- padding:15px;
- max-width:900px;
- margin:auto;
+/* ===== BASE ===== */
+body {
+  font-family: Arial;
+  background: #f5f7fa;
+  padding: 15px;
+  max-width: 900px;
+  margin: auto;
 }
 
-h1{text-align:center}
+h1 {
+  text-align: center;
+}
 
-input{
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== SEARCH BAR ===== */
+#search {
   width: 100%;
-  max-width: 600px;   /* laptop pe zyada wide nahi */
-  padding: 10px 14px; /* height thodi kam */
-  margin: 15px auto;  /* center align */
+  max-width: 600px;
+  padding: 10px 14px;
+  margin: 15px auto;
   font-size: 15px;
   display: block;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #ccc;
-}
-input:focus{
-  outline: none;
-  border-color: #4CAF50;
-  box-shadow: 0 0 6px rgba(76,175,80,0.4);
-}
-.problem{
- background:#fff;
- padding:15px;
- margin:12px 0;
- border-radius:10px;
- box-shadow:0 4px 10px rgba(0,0,0,.1);
- transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.problem:hover{
- transform: translateY(-6px) scale(1.02);
- box-shadow:0 12px 28px rgba(0,0,0,.2);
- border-left:5px solid #4CAF50;
-}
-
-button{
- margin-top:10px;
- padding:8px 12px;
- cursor:pointer;
- transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover{
- background:#4CAF50;
- color:white;
- transform:scale(1.05);
-}
-
-.solution{
- display:none;
- margin-top:10px;
- background:#f0f0f0;
- padding:10px;
- border-radius:8px;
-}
-
-pre{
- white-space:pre-wrap;
-}
-/* ===== FINAL MOBILE FIX (SINGLE MEDIA QUERY) ===== */
-@media (max-width: 600px) {
-
-  h1 {
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    font-size: 20px;
-    margin-top: 18px;
-  }
-
-  .problem {
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 12px;
-  }
-
-  button {
-    width: 100%;
-    padding: 10px;
-    font-size: 15px;
-  }
-
-  #search {
-    width: 100%;
-    max-width: 94%;
-    padding: 12px 14px;
-    font-size: 15px;
-    border-radius: 14px;
-    border: 1px solid #ddd;
-    background: #ffffff;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    margin: 14px auto 18px auto;
-    display: block;
-  }
-
-  #search::placeholder {
-    font-size: 13px;
-    color: #999;
-  }
-
-  pre {
-    font-size: 13px;
-  }
-/* 🔥 Strong Mobile Search Bar Look */
-@media (max-width: 600px) {
-
-  #search {
-    width: 100%;
-    max-width: 96%;
-    padding: 14px 16px;
-    font-size: 15px;
-
-    border-radius: 16px;
-    border: 1px solid #e0e0e0;
-
-    background: #ffffff;
-
-    /* 👇 THIS makes the difference */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
-    margin: 16px auto 20px auto;
-    display: block;
-  }
-
-  #search::placeholder {
-    color: #aaa;
-    font-size: 14px;
-  }
-
+  background: #fff;
 }
 
 #search:focus {
@@ -141,55 +33,54 @@ pre{
   border-color: #4CAF50;
   box-shadow:
     0 0 0 3px rgba(76,175,80,0.15),
-    0 10px 25px rgba(0,0,0,0.15);
+    0 8px 18px rgba(0,0,0,0.15);
 }
-/* ===== DARK MODE TOGGLE BUTTON ===== */
-#darkToggle {
-  position: fixed;
-  top: 14px;
-  right: 14px;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  font-size: 18px;
+
+/* ===== PROBLEM CARD ===== */
+.problem {
+  background: #fff;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  border-left: 5px solid #4CAF50;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 1000;
+  border-radius: 6px;
+  border: none;
 }
 
-/* ===== DARK MODE STYLES ===== */
-body.dark {
-  background: #121212;
-  color: #f1f1f1;
+button:hover {
+  background: #4CAF50;
+  color: white;
 }
 
-body.dark .problem {
-  background: #1e1e1e;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+/* ===== SOLUTION BOX ===== */
+.solution {
+  display: none;
+  margin-top: 10px;
+  background: #f0f0f0;
+  padding: 12px;
+  border-radius: 8px;
 }
 
-body.dark button {
-  background: #2a2a2a;
-  color: #ffffff;
-  border: 1px solid #444;
+pre {
+  white-space: pre-wrap;
+  font-size: 14px;
 }
 
-body.dark pre {
-  background: #0f0f0f;
-  color: #00ffcc;
-}
-
-body.dark #search {
-  background: #1e1e1e;
-  color: #ffffff;
-  border: 1px solid #444;
-}
-html {
-  scroll-behavior: smooth;
-}
-/* ⭐ Copy Code Button */
+/* ===== COPY CODE BUTTON ===== */
 .copy-btn {
   background: #4CAF50;
   color: white;
@@ -198,18 +89,14 @@ html {
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .copy-btn:hover {
   background: #43a047;
 }
 
-body.dark .copy-btn {
-  background: #2e7d32;
-}
-
-
+/* ===== QUESTION BOX ===== */
 .question {
   background: #fff7e6;
   padding: 12px;
@@ -219,7 +106,7 @@ body.dark .copy-btn {
   font-size: 15px;
 }
 
-/* 🔹 Definition Highlight Box */
+/* ===== DEFINITION BOX ===== */
 .definition {
   background: #f1f8ff;
   padding: 12px;
@@ -228,18 +115,72 @@ body.dark .copy-btn {
   margin-bottom: 10px;
   font-size: 15px;
 }
-/* 🔹 Copy Code Button */
-.copy-btn {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 6px;
+
+/* ===== DARK MODE ===== */
+#darkToggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ddd;
   cursor: pointer;
-  margin-bottom: 8px;
+  z-index: 1000;
 }
 
-.copy-btn:hover {
-  background: #43a047;
+body.dark {
+  background: #121212;
+  color: #f1f1f1;
 }
 
+body.dark .problem {
+  background: #1e1e1e;
+}
+
+body.dark pre {
+  background: #0f0f0f;
+  color: #00ffcc;
+}
+
+body.dark .copy-btn {
+  background: #2e7d32;
+}
+
+body.dark #search {
+  background: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* ===== MOBILE FIX (ONLY ONE MEDIA QUERY) ===== */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 18px;
+  }
+
+  #search {
+    max-width: 96%;
+    padding: 14px 16px;
+    border-radius: 16px;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+}
