@@ -61,3 +61,15 @@ document.querySelectorAll(".problem").forEach((card, i) => {
     card.style.transform = "translateY(0)";
   }, i * 100);
 });
+/* ⭐ Copy Code Button Logic */
+document.querySelectorAll(".copy-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const code = btn.nextElementSibling.innerText;
+    navigator.clipboard.writeText(code);
+
+    btn.innerText = "Copied ✔";
+    setTimeout(() => {
+      btn.innerText = "Copy Code";
+    }, 1500);
+  });
+});
