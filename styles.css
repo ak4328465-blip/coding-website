@@ -208,4 +208,19 @@ html {
 body.dark .copy-btn {
   background: #2e7d32;
 }
+.definition {
+  background: #f6f8ff;
+  padding: 10px;
+  border-left: 4px solid #4CAF50;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.question {
+  background: #fff7e6;
+  padding: 8px;
+  border-left: 4px solid #ff9800;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
 
