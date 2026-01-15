@@ -224,3 +224,26 @@ body.dark .copy-btn {
   margin-bottom: 10px;
 }
 
+/* 🔹 Definition Highlight Box */
+.definition {
+  background: #f1f8ff;
+  padding: 10px;
+  border-left: 4px solid #2196f3;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+/* 🔹 Copy Code Button */
+.copy-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.copy-btn:hover {
+  background: #43a047;
+}
