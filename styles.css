@@ -189,4 +189,23 @@ body.dark #search {
 html {
   scroll-behavior: smooth;
 }
+/* ⭐ Copy Code Button */
+.copy-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.copy-btn:hover {
+  background: #43a047;
+}
+
+body.dark .copy-btn {
+  background: #2e7d32;
+}
 
